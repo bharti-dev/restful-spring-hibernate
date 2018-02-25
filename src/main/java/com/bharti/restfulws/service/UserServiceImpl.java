@@ -5,6 +5,7 @@ package com.bharti.restfulws.service;
 
 import org.springframework.stereotype.Service;
 
+import com.bharti.restfulws.dao.UserDao;
 import com.bharti.restfulws.domain.User;
 
 /**
@@ -14,6 +15,8 @@ import com.bharti.restfulws.domain.User;
 @Service("userService")
 public class UserServiceImpl implements UserService {
 
+	private UserDao userDao;
+	
 	/* (non-Javadoc)
 	 * @see com.bharti.restfulws.service.UserService#createUser(com.bharti.restfulws.domain.User)
 	 */
@@ -48,6 +51,14 @@ public class UserServiceImpl implements UserService {
 	public void deleteUser(int userId) {
 		// TODO Auto-generated method stub
 
+	}
+
+	public UserDao getUserDao() {
+		return userDao;
+	}
+
+	public void setUserDao(UserDao userDao) {
+		this.userDao = userDao;
 	}
 
 }

@@ -18,7 +18,7 @@ import com.bharti.restfulws.presentation.domain.UserList;
  * @author AMIT
  *
  */
-@RequestMapping("/user")
+@RequestMapping("/")
 @RestController("userController")
 public class UserController {
 		
@@ -27,9 +27,14 @@ public class UserController {
 		return new User();
 	}
 	
-	@RequestMapping(value="/", method=RequestMethod.GET, produces={"application/json","application/xml"})	
+	@RequestMapping(value="/user", method=RequestMethod.GET, produces={"application/json","application/xml"})	
 	public UserList getAllUsers() {		
 		return prepareList();
+	}
+	
+	@RequestMapping(value="/test", method=RequestMethod.GET, produces={"application/json","application/xml"})	
+	public int test() {		
+		return 1/0;
 	}
 	
 	/*@RequestMapping(value="/", method=RequestMethod.GET)
@@ -58,7 +63,7 @@ public class UserController {
 		
 		l.add(u1);
 		l.add(u2);
-		
+				
 		return new UserList(l.size(), l);
 	}
 }

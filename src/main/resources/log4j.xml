@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration debug="true"
+                     xmlns:log4j='http://jakarta.apache.org/log4j/'>
+
+   <appender name="consoleAppender" class="org.apache.log4j.ConsoleAppender">
+      <layout class="org.apache.log4j.PatternLayout">
+         <param name="ConversionPattern" value="%d{ISO8601} %5p %c{1} - %m%n"/>
+      </layout>
+   </appender>
+
+   <appender name="fileAppender" class="org.apache.log4j.RollingFileAppender">
+      <param name="file" value="restful-spring-hibernate/log4j.log"/>
+      <param name="MaxFileSize" value="100MB" />
+        <param name="MaxBackupIndex" value="20" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{ISO8601} [%d{z}] - %-5p [%t]: [%C] %m%n" />
+        </layout>
+   </appender> 
+    
+   <!-- appender name="enrollFileAppender" class="org.apache.log4j.RollingFileAppender">
+      <param name="file" value="log4j.log"/>
+      <param name="MaxFileSize" value="20MB" />
+      <param name="MaxBackupIndex" value="100" />
+      <param name="Append" value="false" />      
+      <layout class="org.apache.log4j.PatternLayout">
+          <param name="ConversionPattern" value="%d{ISO8601} [%d{z}] - %-5p [%t]: [%C] %m%n" />
+      </layout>
+   </appender-->
+   
+  <!-- *********** -->
+  <!-- * Loggers * -->
+  <!-- *********** -->
+  <logger name="org.hibernate">
+    <level value="ERROR"/>
+  </logger>
+ 
+  <logger name="org.springframework">
+    <level value="ERROR"/>
+  </logger>
+  
+  <logger name="org.apache.commons">
+    <level value="ERROR"/>
+ </logger>
+     
+  <!-- ******** -->
+  <!-- * Root * -->
+  <!-- ******** --> 
+   <root>
+      <level value="DEBUG"/>
+      <appender-ref ref="fileAppender"/>
+   </root>
+</log4j:configuration>

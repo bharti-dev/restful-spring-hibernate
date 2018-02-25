@@ -12,7 +12,7 @@
 	<bean id="applicationContext-main" class="org.springframework.context.support.ClassPathXmlApplicationContext">
 		<constructor-arg>
 			<list>
-				<!-- Reference each spring configuration file here -->
+				<!-- Refer each spring configuration file here -->
 				<value>spring/spring-business.xml</value>
 				<value>spring/spring-common.xml</value>
 				<value>spring/spring-datasource.xml</value>

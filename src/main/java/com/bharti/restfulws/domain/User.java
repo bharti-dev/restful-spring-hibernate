@@ -16,9 +16,11 @@ import org.apache.commons.collections.CollectionUtils;
 public class User implements Serializable {	
 	private static final long serialVersionUID = 1L;
 		
+	private long id;
 	private String firstName;
 	private String middleName;
 	private String lastName;
+	private int age;
 	private List<Address> addresses;
 	
 	/**
@@ -77,5 +79,17 @@ public class User implements Serializable {
 	 */
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
+	}
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
 	}
 }
