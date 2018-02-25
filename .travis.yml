@@ -1,5 +1,4 @@
 language: java
-
 jdk:
   - oraclejdk8
 addons:
@@ -9,7 +8,6 @@ addons:
     secure: "HsKrGVE5WZHC38kXb78FE5e0nNbFoT2YeVoEbCSXIy6d48lPi8QBi5dAr0AZg8N+oktjpoVO2y7lBCsnQaqzRpeQlo6Jui7LPAiZ5qDIfXJC7n+7Z9IvMOvYkOGwbaarIVDRR56GAHFcy6qBusBsUc2V+LkEiVrLV6QhDCHh1j3yXCkr9rFsxzS3VmYxkSWkJkUCyUH25hetN072hTmCuv+PvL7N0LjYGZXDETEz0i6VeGgJqvMQiY4Depj4BN7ylWBafV/8EbEMsGQiw4OPg5Q6UPaZ/UZ/ApD/m/naZ5jjEkbRKvvD+T8pzByl9hKN4FiNe8PLDyyDgH1U8svQ1VhJv6tvsDPSUOxJdh0gjXXRF5aT59D+CvJtrIU27pV114tkJGZTjt343uqq1YQwHXh90Aq1r8z02jqanCR0p54ZNa80kLxXspxTZ0e+M9EOphZj7EwDrbNx0CfcVuyhbl7giupyovpjtr14Cp+x+Me35ZV0IZDBlH0AWOOoeBt0BIT8ZhKL8e2a2sZ3HT3+XgFC7HfNVHxiNASkuxHynoqa/Z3dd+xcUVgSYOJN8Z8zw8VzxD/QODtJzM5aiYePbYFLzlukRW8yu66szRRvAo+Xkep/tmMqR3sRcWD3mymGJug6vvWoh8o1Wnm1HKaC+dm20TFmw7oaSobp68mP844="
     branches:
       - master
-      - develop
-	  - feature/ci-codequality
+      - feature/ci-codequality
 script:
   - sonar-scanner
